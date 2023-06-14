@@ -1,0 +1,62 @@
+@import '../../styles/global.scss';
+
+.heatmap-container {
+  display: flex;
+  align-items: center;
+
+  .heatmap {
+    width: 38rem;
+    padding-bottom: 4rem;
+    font-family: $font-family-secondary;
+    text-align: center;
+    margin: 2rem;
+
+    @include respond-medium {
+      width: 20rem;
+      padding-bottom: 0;
+      margin: 0;
+    }
+  }
+
+  .tooltip-container {
+    .tooltip {
+      padding: 1rem;
+
+      background-color: $color-light;
+      border: 1px solid #cccccc;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.15);
+      pointer-events: none;
+      width: 15rem;
+
+      @include respond-medium {
+        width: max-content;
+        margin: 1rem;
+      }
+    }
+  }
+
+  @include respond-medium {
+    flex-direction: column;
+  }
+
+  .color-empty {
+    fill: #a9a9a9;
+  }
+
+  .color-scale-1 {
+    fill: #c5e1a5;
+  }
+  .color-scale-2 {
+    fill: #aed581;
+  }
+  .color-scale-3 {
+    fill: #9ccc65;
+  }
+  .color-scale-4 {
+    fill: #8bc34a;
+  }
+  .color-scale-5 {
+    fill: #1e6823;
+  }
+}
